@@ -1,0 +1,125 @@
+.build {
+  position: relative;
+  padding-top: 198px;
+  padding-bottom: 140px;
+  background-color: $build-bg-color;
+
+  &::before{
+    position: absolute;
+    bottom:0;
+    // left: calc(50% + 658px);
+    right: 0;
+    width: 100px;
+    height: 244px;
+    background-image:url("../images/build-bg-image1.svg");
+    content: "";
+  }
+}
+
+.build__inner {
+  @include display-flex-starter;
+  align-items: flex-start;
+}
+
+.build__titlebox {
+  max-width: 445px;
+  width:100%;
+  margin-right: 220px;
+}
+
+.build__title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: $main-text-color;
+
+  &::before{
+    position: absolute;
+    top:-58px;
+    left:0;
+    display: inline-block;
+    width:50px;
+    height: 4px;
+    background-color:$text-decor-color;
+    content:"";
+  }
+}
+
+.build__infobox {
+  max-width: 445px;
+  width: 100%;
+}
+
+.build__list {
+  @include correct-list;
+
+}
+
+.build__item {
+  position: relative;
+  margin-top: 32px;
+
+  &:nth-child(1){
+    margin-top: 0;
+  }
+
+  &::before{
+    position: absolute;
+    top:0;
+    left: -95px;
+    width: 72px;
+    height: 72px;
+    background-image:url("../images/build-list-image1.svg");
+    content: "";
+  }
+
+  &:nth-child(2)::before{
+    background-image:url("../images/build-list-image2.svg");
+  }
+
+  &:nth-child(3)::before{
+    background-image:url("../images/build-list-image3.svg");
+  }
+}
+
+.build__subtitle {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-decor-color;
+}
+
+.build__text {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: $main-text-color;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width:768px) {
+  .build {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  
+    &::before{
+      top:0;
+      // left: calc(50% + 280px);
+      right: 0;
+      
+    }
+  }
+
+  .build__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+}
