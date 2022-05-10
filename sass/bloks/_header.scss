@@ -1,0 +1,90 @@
+.site-header{
+  padding-top: 73px;
+  padding-bottom: 129px;
+  background-color: $main-bg-color;
+}
+
+.header__inner{
+  @include display-flex-starter;
+}
+
+.site-logo__img{
+  width: 160px;
+  height: 40px;
+}
+
+.menu{
+  width:100%;
+}
+
+.menu__list{
+  @include display-flex-starter;
+  @include correct-list;
+  margin-left: 80px;
+}
+
+.menu__item:nth-child(1){
+  margin-right: 40px;
+}
+
+.menu__item:nth-child(3){
+  margin-left: auto;
+}
+
+.menu__item:nth-child(3)>.menu__link{
+  padding:10px 32px;
+  border-radius: 24px;
+  border: 2px solid #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+
+.menu__link{
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  border-radius: 24px;
+  color: $main-text-color;
+}
+
+.menu__item:nth-child(3)>.menu__link:hover{
+  color: #333;
+  background-color:$main-text-color;
+}
+
+.burger-button{
+  display: none;
+  margin-left: auto;
+  font-size: 30px;
+  color: $main-text-color;
+  background-color:$main-bg-color;
+  border: none;
+}
+
+@media only screen and (max-width:768px){
+  .site-header{
+    padding-top: 64px;
+    padding-bottom: 112px;
+  }
+
+  .menu__list{
+    margin-left: 48px;
+  }
+}
+
+@media only screen and (max-width:576px) {
+  .site-header{
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .burger-button{
+    display: inline-block;
+  }
+}
