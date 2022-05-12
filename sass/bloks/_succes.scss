@@ -1,0 +1,148 @@
+.succes {
+	padding-top: 140px;
+	padding-bottom: 150px;
+	background-image: url('../images/succes-bg-image1.svg'),
+		url('../images/succes-bg-image2.svg');
+	background-repeat: no-repeat;
+	background-size: 147px 100px, 200px 100px;
+	background-position: calc(50% - 685px) top, calc(50% + 660px) bottom;
+	background-color: $succes-bg-color;
+}
+
+.succes__titlebox {
+	margin: 0 auto;
+}
+
+.succes__title {
+	margin: 0;
+	margin-bottom: 92px;
+	padding: 0;
+
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: $main-text-color;
+
+	mark {
+		color: $main-decor-color;
+		background-color: transparent;
+	}
+}
+
+.succes__list {
+	@include correct-list;
+	display: flex;
+	align-items: center;
+}
+
+.succes__item {
+	position: relative;
+	z-index: 100;
+	max-width: 350px;
+	width: 100%;
+	text-align: center;
+	& + .succes__item {
+		margin-left: 30px;
+	}
+
+	&::before {
+		position: absolute;
+		z-index: -100;
+		top: -35px;
+		left: calc(50% - 34px);
+		display: inline-block;
+		width: 67px;
+		height: 56px;
+		background-image: url('../images/“.svg');
+		content: '';
+	}
+}
+
+.succes__text {
+	margin: 0;
+	margin-bottom: 24px;
+	padding: 0;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 25px;
+	color: $main-text-color;
+}
+
+.succes__name {
+	display: block;
+	margin-bottom: 2px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	color: $main-decor-color;
+}
+
+.succes__job {
+	display: block;
+	margin-bottom: 32px;
+	font-size: 13px;
+	line-height: 18px;
+	text-align: center;
+	color: $main-text-color;
+}
+
+.succes__photo {
+	width: 62px;
+	height: 62px;
+}
+
+@media only screen and (max-width: 768px) {
+	.succes {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-position: left top, right bottom;
+	}
+
+	.succes__titlebox {
+		max-width: 470px;
+		width: 100%;
+	}
+
+	.succes__title {
+		margin-bottom: 84px;
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.succes__list {
+		flex-direction: column;
+	}
+
+	.succes__item {
+		max-width: 573px;
+
+		& + .succes__item {
+			margin-left: 0;
+			margin-top: 84px;
+		}
+	}
+
+	.succes__text {
+		margin-bottom: 16px;
+	}
+
+	.succes__job {
+		margin-bottom: 16px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.succes {
+		padding-top: 140px;
+		padding-bottom: 164px;
+	}
+
+	.succes__titlebox {
+		max-width: 327px;
+	}
+
+	.succes__item {
+		max-width: 327px;
+	}
+}
