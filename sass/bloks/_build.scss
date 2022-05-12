@@ -109,7 +109,7 @@
 	.build {
 		padding-top: 136px;
 		padding-bottom: 100px;
-		background-position: right top;
+		background-position: right -100px top;
 	}
 
 	.build__inner {
@@ -148,7 +148,6 @@
 	.build {
 		padding-top: 100px;
 		padding-bottom: 64px;
-		background-position: calc(50% + 234px) top;
 	}
 
 	.build__inner {
