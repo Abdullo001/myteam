@@ -757,7 +757,7 @@ img {
   .build {
     padding-top: 136px;
     padding-bottom: 100px;
-    background-position: calc(50% + 290px) top;
+    background-position: right top;
   }
   .build__inner {
     -webkit-box-pack: center;
