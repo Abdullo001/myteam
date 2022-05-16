@@ -1,0 +1,215 @@
+.meet {
+	padding-top: 140px;
+	padding-bottom: 168px;
+	background-image: url('../images/about-meet-bg-image1.svg'),
+		url('../../images/about-meet-bg-image2.svg');
+	background-repeat: no-repeat;
+	background-size: 300px 200px, 147px 100px;
+	background-position: calc(50% - 720px) top, calc(50% + 700px) bottom;
+	background-color: $succes-bg-color;
+}
+
+.meet__title {
+	display: block;
+	margin: 0;
+	margin-bottom: 64px;
+	padding: 0;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.meet__list {
+	@include display-flex-starter;
+	@include correct-list;
+	flex-wrap: wrap;
+}
+
+.meet__item {
+	position: relative;
+	@include display-flex-starter;
+	flex-direction: column;
+	max-width: 350px;
+	min-height: 253px;
+	width: 100%;
+	height: 100%;
+	margin-right: 30px;
+	margin-bottom: 76px;
+	padding: 32px 48px 56px 48px;
+	background-color: $build-bg-color;
+
+	&:nth-child(3n + 3) {
+		margin-right: 0;
+	}
+
+	&:nth-child(n + 4) {
+		margin-bottom: 0;
+	}
+
+	&:nth-child(6) {
+		background-color: $main-btn-text-color;
+	}
+}
+
+.item__close {
+	@include display-flex-starter;
+	flex-direction: column;
+}
+
+.item__open {
+	@include display-flex-starter;
+	flex-direction: column;
+	display: none;
+
+	.meet__subtitle {
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 28px;
+		text-align: center;
+		color: $main-decor-color;
+	}
+
+	.meet__text {
+		margin: 0;
+		margin-bottom: 24px;
+		padding: 0;
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 25px;
+		text-align: center;
+		color: #ffffff;
+	}
+
+	.meet__link {
+		margin-right: 16px;
+		text-decoration: none;
+	}
+}
+
+.meet__img {
+	width: 96px;
+	height: 96px;
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.meet__name {
+	display: block;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+	color: $main-decor-color;
+}
+
+.meet__job {
+	display: block;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: center;
+	color: $main-text-color;
+}
+
+.meet__btn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: -28px;
+	left: calc(50% - 28px);
+	width: 56px;
+	height: 56px;
+	background-color: $text-decor-color;
+	border: 0;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $main-decor-color;
+	}
+}
+
+.meet__btn-close {
+	background-color: $main-decor-color;
+	transform: rotate(45deg);
+
+	&:hover {
+		background-color: $text-decor-color;
+	}
+}
+
+.meet__btnimg {
+	width: 16px;
+	height: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+	.meet {
+		padding-top: 100px;
+		padding-bottom: 128px;
+		background-position: left -100px top, right bottom;
+	}
+
+	.meet__title {
+		margin-bottom: 48px;
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.meet__list {
+		justify-content: center;
+	}
+
+	.meet__item {
+		max-width: 281px;
+		max-height: 253px;
+		margin-right: 11px;
+		margin-bottom: 76px;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+
+		&:nth-child(3) {
+			margin-right: 11px;
+		}
+
+		&:nth-child(4) {
+			margin-bottom: 76px;
+		}
+
+		&:nth-child(n + 5) {
+			margin-bottom: 0;
+		}
+
+		&:nth-child(6) {
+			background-color: $main-btn-text-color;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.meet {
+		padding-top: 88px;
+		padding-bottom: 116px;
+		background-position: left -100px top -100px, right bottom;
+	}
+
+	.meet__item {
+		max-width: 100%;
+		max-height: 253px;
+		margin: 0;
+
+		&:nth-child(n) {
+			margin: 0 0 52px 0;
+		}
+
+		&:nth-child(6) {
+			margin: 0;
+		}
+	}
+}
