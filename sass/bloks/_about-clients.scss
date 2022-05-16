@@ -1,0 +1,81 @@
+.clients {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	background-image: url('../images/clients-bg.svg');
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+	background-position: calc(50% - 660px) top;
+	background-color: $build-bg-color;
+}
+
+.clients__inner {
+}
+
+.clients__title {
+	margin: 0;
+	margin-bottom: 64px;
+	padding: 0;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: $main-text-color;
+}
+
+.clients__list {
+	@include display-flex-starter;
+	// flex-wrap: wrap;
+	@include correct-list;
+}
+
+.clients__item {
+	width: auto;
+	max-width: 184px;
+	margin-right: 80px;
+
+	&:nth-child(5) {
+		margin-right: 0;
+	}
+}
+
+.clients__link {
+	text-decoration: none;
+}
+
+.clients__pic {
+	width: auto;
+	max-width: 184px;
+}
+
+.clients__img {
+	width: auto;
+	max-width: 184px;
+}
+
+@media only screen and (max-width: 768px) {
+	.clients {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-position: left top -100px;
+		background-color: $build-bg-color;
+	}
+
+	.clients__title {
+		margin-bottom: 48px;
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.clients__list {
+		flex-wrap: wrap;
+	}
+
+	.clients__item {
+		margin-right: 43px;
+
+		&:nth-child(1) > .clients__link > .clients__pic {
+			width: 103px;
+			height: 17px;
+		}
+	}
+}

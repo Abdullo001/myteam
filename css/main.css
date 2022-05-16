@@ -1378,6 +1378,23 @@ img {
   height: 16px;
 }
 
+@media only screen and (max-width: 1150px) {
+  .meet__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .meet__item {
+    margin-right: 30px;
+    margin-bottom: 76px;
+  }
+  .meet__item:nth-child(4) {
+    margin-left: 30px;
+    margin-right: 0;
+    margin-bottom: 76px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .meet {
     padding-top: 100px;
@@ -1407,13 +1424,11 @@ img {
     margin-right: 11px;
   }
   .meet__item:nth-child(4) {
+    margin-left: 0;
     margin-bottom: 76px;
   }
   .meet__item:nth-child(n + 5) {
     margin-bottom: 0;
-  }
-  .meet__item:nth-child(6) {
-    background-color: #002529;
   }
 }
 
@@ -1433,6 +1448,88 @@ img {
   }
   .meet__item:nth-child(6) {
     margin: 0;
+  }
+}
+
+.clients {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-image: url("../images/clients-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: calc(50% - 660px) top;
+  background-color: #012f34;
+}
+
+.clients__title {
+  margin: 0;
+  margin-bottom: 64px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.clients__item {
+  width: auto;
+  max-width: 184px;
+  margin-right: 80px;
+}
+
+.clients__item:nth-child(5) {
+  margin-right: 0;
+}
+
+.clients__link {
+  text-decoration: none;
+}
+
+.clients__pic {
+  width: auto;
+  max-width: 184px;
+}
+
+.clients__img {
+  width: auto;
+  max-width: 184px;
+}
+
+@media only screen and (max-width: 768px) {
+  .clients {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: left top -100px;
+    background-color: #012f34;
+  }
+  .clients__title {
+    margin-bottom: 48px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .clients__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .clients__item {
+    margin-right: 43px;
+  }
+  .clients__item:nth-child(1) > .clients__link > .clients__pic {
+    width: 103px;
+    height: 17px;
   }
 }
 

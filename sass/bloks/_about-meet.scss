@@ -143,6 +143,27 @@
 	height: 16px;
 }
 
+@media only screen and (max-width: 1150px) {
+	.meet__list {
+		justify-content: center;
+	}
+
+	.meet__item {
+		margin-right: 30px;
+		margin-bottom: 76px;
+
+		&:nth-child(4) {
+			margin-left: 30px;
+			margin-right: 0;
+			margin-bottom: 76px;
+		}
+
+		// &:nth-child(n + 4) {
+		// 	margin-bottom: 0;
+		// }
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.meet {
 		padding-top: 100px;
@@ -175,15 +196,12 @@
 		}
 
 		&:nth-child(4) {
+			margin-left: 0;
 			margin-bottom: 76px;
 		}
 
 		&:nth-child(n + 5) {
 			margin-bottom: 0;
-		}
-
-		&:nth-child(6) {
-			background-color: $main-btn-text-color;
 		}
 	}
 }
