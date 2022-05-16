@@ -1260,10 +1260,6 @@ img {
   margin-bottom: 0;
 }
 
-.meet__item:nth-child(6) {
-  background-color: #002529;
-}
-
 .item__close {
   display: -webkit-box;
   display: -ms-flexbox;
