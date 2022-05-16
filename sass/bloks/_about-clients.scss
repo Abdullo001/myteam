@@ -8,9 +8,6 @@
 	background-color: $build-bg-color;
 }
 
-.clients__inner {
-}
-
 .clients__title {
 	margin: 0;
 	margin-bottom: 64px;
@@ -39,6 +36,9 @@
 }
 
 .clients__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
 }
 
@@ -48,7 +48,6 @@
 }
 
 .clients__img {
-	width: auto;
 	max-width: 184px;
 }
 
@@ -72,10 +71,22 @@
 
 	.clients__item {
 		margin-right: 43px;
+	}
+}
 
-		&:nth-child(1) > .clients__link > .clients__pic {
-			width: 103px;
-			height: 17px;
+@media only screen and (max-width: 576px) {
+	.clients__list {
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+
+	.clients__item {
+		margin-right: 0;
+		margin-bottom: 30px;
+		width: 100%;
+
+		&:nth-child(5) {
+			margin-bottom: 0;
 		}
 	}
 }
